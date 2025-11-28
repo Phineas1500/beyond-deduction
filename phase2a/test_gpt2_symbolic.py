@@ -103,6 +103,14 @@ MODEL_CONFIGS = {
     # Pythia family (2048 context)
     "pythia-160m": {"hf_name": "EleutherAI/pythia-160m", "context_len": 2048},
     "pythia-410m": {"hf_name": "EleutherAI/pythia-410m", "context_len": 2048},
+    "pythia-1b": {"hf_name": "EleutherAI/pythia-1b", "context_len": 2048},
+    # StableLM (4096 context)
+    "stablelm-3b": {"hf_name": "stabilityai/stablelm-3b-4e1t", "context_len": 4096},
+    # Qwen family (32k context - great for deep trees!)
+    "qwen-0.6b": {"hf_name": "Qwen/Qwen3-0.6B", "context_len": 32768},
+    "qwen-1.7b": {"hf_name": "Qwen/Qwen3-1.7B", "context_len": 32768},
+    # Phi family (2048 context, but very capable)
+    "phi-2": {"hf_name": "microsoft/phi-2", "context_len": 2048},
 }
 
 
