@@ -1,11 +1,19 @@
 """
-Test GPT-2-Small on INABHYD-style natural language inductive reasoning.
+Test LLMs on INABHYD-style natural language inductive reasoning.
 
-This script tests whether GPT-2-Small shows similar multi-hop reasoning
+This script tests whether LLMs show similar multi-hop reasoning
 limitations as our custom transformer on symbolic ontology tasks.
 
+Supported models:
+- GPT-2 family (gpt2, gpt2-medium, gpt2-large) - 1024 context
+- GPT-Neo family (gpt-neo-125m, gpt-neo-1.3b) - 2048 context
+- Pythia family (pythia-160m, pythia-410m, pythia-1b) - 2048 context
+- StableLM (stablelm-3b) - 4096 context
+- Qwen family (qwen-0.6b, qwen-1.7b) - 32k context
+
 Usage:
-    python test_gpt2_inabhyd.py
+    python test_gpt2_inabhyd.py --model gpt2 --num-samples 50
+    python test_gpt2_inabhyd.py --model qwen-0.6b --num-samples 100
 
 Requirements:
     pip install transformers torch
@@ -20,7 +28,7 @@ import argparse
 
 # Import transformers components
 try:
-    from transformers import GPT2LMHeadModel, GPT2Tokenizer, GenerationConfig
+    from transformers import AutoModelForCausalLM, AutoTokenizer
 except ImportError:
     print("Please install/reinstall transformers: pip install transformers --upgrade")
     exit(1)
@@ -263,7 +271,33 @@ def generate_nl_dataset(num_samples: int, tree_depth: int, seed: int = 42) -> Li
 
 
 # =============================================================================
-# GPT-2 Evaluation
+# Model Configuration
+# =============================================================================
+
+MODEL_CONFIGS = {
+    # GPT-2 family (1024 context)
+    "gpt2": {"hf_name": "gpt2", "context_len": 1024},
+    "gpt2-medium": {"hf_name": "gpt2-medium", "context_len": 1024},
+    "gpt2-large": {"hf_name": "gpt2-large", "context_len": 1024},
+    # GPT-Neo family (2048 context)
+    "gpt-neo-125m": {"hf_name": "EleutherAI/gpt-neo-125M", "context_len": 2048},
+    "gpt-neo-1.3b": {"hf_name": "EleutherAI/gpt-neo-1.3B", "context_len": 2048},
+    # Pythia family (2048 context)
+    "pythia-160m": {"hf_name": "EleutherAI/pythia-160m", "context_len": 2048},
+    "pythia-410m": {"hf_name": "EleutherAI/pythia-410m", "context_len": 2048},
+    "pythia-1b": {"hf_name": "EleutherAI/pythia-1b", "context_len": 2048},
+    # StableLM (4096 context)
+    "stablelm-3b": {"hf_name": "stabilityai/stablelm-3b-4e1t", "context_len": 4096},
+    # Qwen family (32k context - great for deep trees!)
+    "qwen-0.6b": {"hf_name": "Qwen/Qwen3-0.6B", "context_len": 32768},
+    "qwen-1.7b": {"hf_name": "Qwen/Qwen3-1.7B", "context_len": 32768},
+    # Phi family (2048 context, but very capable)
+    "phi-2": {"hf_name": "microsoft/phi-2", "context_len": 2048},
+}
+
+
+# =============================================================================
+# LLM Evaluation
 # =============================================================================
 
 def create_few_shot_prompt(test_sample: Dict, few_shot_examples: List[Dict]) -> str:
@@ -286,10 +320,18 @@ def create_few_shot_prompt(test_sample: Dict, few_shot_examples: List[Dict]) -> 
     return prompt
 
 
-def generate_text(model, tokenizer, prompt: str, device: str, max_new_tokens: int = 30) -> str:
+def generate_text(model, tokenizer, prompt: str, device: str, max_context: int = 1024, max_new_tokens: int = 30) -> str:
     """Generate text using greedy decoding."""
     model.eval()
     input_ids = tokenizer.encode(prompt, return_tensors="pt").to(device)
+
+    # Check if prompt is too long - truncate from beginning, leaving room for generation
+    max_input = max_context - max_new_tokens - 10  # Leave buffer
+    if input_ids.shape[1] > max_input:
+        print(f"  [WARNING] Input truncated from {input_ids.shape[1]} to {max_input} tokens")
+        input_ids = input_ids[:, -max_input:]
+
+    prompt_len = input_ids.shape[1]
 
     with torch.no_grad():
         for _ in range(max_new_tokens):
@@ -299,27 +341,37 @@ def generate_text(model, tokenizer, prompt: str, device: str, max_new_tokens: in
             input_ids = torch.cat([input_ids, next_token], dim=-1)
 
             # Stop at newline or EOS
-            if next_token.item() == tokenizer.eos_token_id or next_token.item() == tokenizer.encode('\n')[0]:
+            if next_token.item() == tokenizer.eos_token_id:
+                break
+            # Check for newline (handle different tokenizers)
+            decoded = tokenizer.decode([next_token.item()])
+            if '\n' in decoded:
                 break
 
-    generated = tokenizer.decode(input_ids[0], skip_special_tokens=True)
+    # Return only the generated part
+    generated_ids = input_ids[0, prompt_len:]
+    generated = tokenizer.decode(generated_ids, skip_special_tokens=True)
     return generated
 
 
-def evaluate_gpt2(model, tokenizer, test_samples: List[Dict],
-                  few_shot_examples: List[Dict], device: str,
-                  max_new_tokens: int = 30) -> Dict:
-    """Evaluate GPT-2 on test samples."""
+def evaluate_nl(model, tokenizer, test_samples: List[Dict],
+                few_shot_examples: List[Dict], device: str,
+                max_context: int = 1024, debug: bool = False) -> Dict:
+    """Evaluate LLM on natural language test samples."""
     correct = 0
     total = 0
     results = []
 
-    for sample in test_samples:
+    for i, sample in enumerate(test_samples):
         prompt = create_few_shot_prompt(sample, few_shot_examples)
 
-        # Generate using manual loop
-        generated = generate_text(model, tokenizer, prompt, device, max_new_tokens)
-        generated_answer = generated[len(prompt):].strip()
+        # Generate using manual loop - now returns only generated text
+        generated_answer = generate_text(model, tokenizer, prompt, device, max_context=max_context)
+        generated_answer = generated_answer.strip()
+
+        # Debug: show first few raw outputs
+        if debug and i < 3:
+            print(f"  DEBUG raw output: '{generated_answer[:100]}'")
 
         # Check if correct (flexible matching)
         expected = sample['hypothesis'].lower()
@@ -353,8 +405,9 @@ def evaluate_gpt2(model, tokenizer, test_samples: List[Dict],
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Test GPT-2-Small on INABHYD-style tasks")
-    parser.add_argument("--model", default="gpt2", choices=["gpt2", "gpt2-medium", "gpt2-large"])
+    parser = argparse.ArgumentParser(description="Test LLMs on INABHYD-style natural language tasks")
+    parser.add_argument("--model", default="gpt2", choices=list(MODEL_CONFIGS.keys()),
+                        help="Model to test (see MODEL_CONFIGS for options)")
     parser.add_argument("--num-samples", type=int, default=50, help="Samples per depth")
     parser.add_argument("--num-few-shot", type=int, default=3, help="Few-shot examples")
     parser.add_argument("--min-depth", type=int, default=2)
@@ -362,14 +415,20 @@ def main():
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
 
+    # Get model config
+    model_config = MODEL_CONFIGS[args.model]
+    hf_name = model_config["hf_name"]
+    max_context = model_config["context_len"]
+
     # Device
     device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
     print(f"Using device: {device}")
 
-    # Load model and tokenizer
-    print(f"\nLoading {args.model}...")
-    tokenizer = GPT2Tokenizer.from_pretrained(args.model)
-    model = GPT2LMHeadModel.from_pretrained(args.model).to(device)
+    # Load model and tokenizer using AutoModel/AutoTokenizer
+    print(f"\nLoading {args.model} ({hf_name})...")
+    print(f"Context length: {max_context} tokens")
+    tokenizer = AutoTokenizer.from_pretrained(hf_name)
+    model = AutoModelForCausalLM.from_pretrained(hf_name).to(device)
     n_params = sum(p.numel() for p in model.parameters())
     print(f"Model loaded: {n_params:,} parameters")
 
@@ -377,7 +436,7 @@ def main():
     all_results = {}
 
     print("\n" + "="*60)
-    print("TESTING GPT-2 ON INABHYD-STYLE MULTI-HOP REASONING")
+    print(f"TESTING {args.model.upper()} ON INABHYD-STYLE NATURAL LANGUAGE REASONING")
     print("="*60)
 
     for depth in range(args.min_depth, args.max_depth + 1):
@@ -409,14 +468,15 @@ def main():
         print(f"  Observations: {sample['observations']}")
         print(f"  Expected: {sample['hypothesis']}")
 
-        # Evaluate
+        # Evaluate (debug=True for first depth to see raw output)
         print(f"\nEvaluating {len(test_samples)} samples...")
-        result = evaluate_gpt2(model, tokenizer, test_samples, few_shot_examples, device)
+        result = evaluate_nl(model, tokenizer, test_samples, few_shot_examples, device,
+                             max_context=max_context, debug=(depth == args.min_depth))
         all_results[depth] = result
 
         # Show some predictions
         print(f"\nSample predictions:")
-        for i, r in enumerate(result['results'][:3]):
+        for r in result['results'][:3]:
             status = "✓" if r['correct'] else "✗"
             print(f"  [{status}] Expected: {r['expected']}")
             print(f"       Got: {r['generated'][:60]}...")
@@ -425,8 +485,11 @@ def main():
 
     # Summary
     print("\n" + "="*60)
-    print("SUMMARY")
+    print(f"SUMMARY: {args.model.upper()} ON NATURAL LANGUAGE FORMAT")
     print("="*60)
+    n_params = sum(p.numel() for p in model.parameters())
+    print(f"Model: {args.model} ({n_params/1e6:.1f}M params, context: {max_context})")
+    print()
     for depth, result in all_results.items():
         hops = depth - 1
         acc = result['accuracy']
@@ -434,18 +497,23 @@ def main():
         print(f"Depth-{depth} ({hops}-hop): {acc:.1%} [{status}]")
 
     print("\n" + "="*60)
-    print("COMPARISON WITH CUSTOM TRANSFORMER")
+    print("COMPARISON")
     print("="*60)
-    print("Custom Transformer (1.9M params):")
-    print("  Depth-2 (1-hop): 100.0%")
-    print("  Depth-3 (2-hop): 100.0%")
-    print("  Depth-4 (3-hop): 100.0%")
-    print("  Depth-5 (4-hop): 82.5%")
-    print("  Depth-6 (5-hop): 42.9%")
-    print(f"\nGPT-2-Small ({args.model}, 124M params):")
-    for depth, result in all_results.items():
-        hops = depth - 1
-        print(f"  Depth-{depth} ({hops}-hop): {result['accuracy']:.1%}")
+    print("\nCustom Transformer (1.9M params, trained on symbolic):")
+    print("  Depth-2: 100.0%  |  Depth-3: 100.0%  |  Depth-4: 100.0%  |  Depth-5: 82.5%")
+
+    print(f"\nGPT-2 on Natural Language (few-shot, 124M params):")
+    print("  Depth-2: 42.0%   |  Depth-3: 16.0%   |  Depth-4: 6.0%    |  Depth-5: 8.0%")
+
+    print(f"\nQwen3-0.6B on Symbolic (few-shot, 596M params):")
+    print("  Depth-2: 93.0%   |  Depth-3: 91.0%   |  Depth-4: 93.0%   |  Depth-5: 98.0%   |  Depth-6: 95.4%")
+
+    print(f"\n{args.model} on Natural Language (few-shot, {n_params/1e6:.1f}M params):")
+    summary = "  "
+    for depth in range(args.min_depth, args.max_depth + 1):
+        if depth in all_results:
+            summary += f"Depth-{depth}: {all_results[depth]['accuracy']:.1%}   |  "
+    print(summary.rstrip("  |  "))
 
 
 if __name__ == "__main__":
