@@ -1,0 +1,175 @@
+============================================================
+TESTING GPT-2 ON SYMBOLIC ONTOLOGY REASONING
+============================================================
+
+============================================================
+DEPTH-2 (1-hop reasoning)
+============================================================
+Generating 50 test samples...
+Generated 50 samples
+
+Sample input (first 200 chars):
+  [WORLD_MODEL]
+∀x: c2(x) -> p1(x)
+∀x: c1(x) -> p3(x)
+∀x: c1(x) -> c0(x)
+c2(e3)
+c1(e0)
+c1(e1)
+∀x: c2(x) -> c0(x)
+c2(e2)
+[OBSERVATIONS]
+p2(e2)
+p2(e3)
+c1(e1)
+p2(e1)
+c2(e3)
+c2(e2)
+[TASK]
+Infer the most gen...
+
+Expected output: ∀x: c0(x) -> p2(x)
+
+Evaluating 50 samples...
+  DEBUG raw output: '∀x: c0(x) -> p2(x)'
+  DEBUG raw output: '∀x: c0(x) -> p1(x)'
+  DEBUG raw output: '∀x: c0(x) -> p3(x)'
+
+Sample predictions:
+  [✓] Expected: ∀x: c0(x) -> p2(x)
+       Got: ∀x: c0(x) -> p2(x)
+  [✓] Expected: ∀x: c0(x) -> p1(x)
+       Got: ∀x: c0(x) -> p1(x)
+  [✓] Expected: ∀x: c0(x) -> p3(x)
+       Got: ∀x: c0(x) -> p3(x)
+
+>>> DEPTH-2 ACCURACY: 86.0% (43/50) <<<
+
+============================================================
+DEPTH-3 (2-hop reasoning)
+============================================================
+Generating 50 test samples...
+Generated 50 samples
+
+Sample input (first 200 chars):
+  [WORLD_MODEL]
+c6(e7)
+∀x: c4(x) -> c1(x)
+∀x: c2(x) -> p1(x)
+c4(e3)
+∀x: c4(x) -> p1(x)
+∀x: c1(x) -> c0(x)
+c3(e0)
+∀x: c2(x) -> c0(x)
+∀x: c6(x) -> c2(x)
+c4(e2)
+∀x: c1(x) -> p3(x)
+c6(e6)
+∀x: c5(x) -> c2(x)...
+
+Expected output: ∀x: c0(x) -> p4(x)
+
+Evaluating 50 samples...
+
+Sample predictions:
+  [✓] Expected: ∀x: c0(x) -> p4(x)
+       Got: ∀x: c0(x) -> p4(x)
+  [✓] Expected: ∀x: c0(x) -> p5(x)
+       Got: ∀x: c0(x) -> p5(x)
+  [✓] Expected: ∀x: c0(x) -> p3(x)
+       Got: ∀x: c0(x) -> p3(x)
+
+>>> DEPTH-3 ACCURACY: 64.0% (32/50) <<<
+
+============================================================
+DEPTH-4 (3-hop reasoning)
+============================================================
+Generating 50 test samples...
+Generated 50 samples
+
+Sample input (first 200 chars):
+  [WORLD_MODEL]
+∀x: c5(x) -> c2(x)
+∀x: c3(x) -> c1(x)
+∀x: c6(x) -> c2(x)
+∀x: c4(x) -> c1(x)
+∀x: c10(x) -> c4(x)
+∀x: c1(x) -> c0(x)
+∀x: c13(x) -> c6(x)
+c12(e10)
+∀x: c1(x) -> p2(x)
+c9(e4)
+∀x: c14(x) -> c6...
+
+Expected output: ∀x: c0(x) -> p1(x)
+
+Evaluating 50 samples...
+
+Sample predictions:
+  [✓] Expected: ∀x: c0(x) -> p1(x)
+       Got: ∀x: c0(x) -> p1(x)
+  [✓] Expected: ∀x: c0(x) -> p5(x)
+       Got: ∀x: c0(x) -> p5(x)
+  [✓] Expected: ∀x: c0(x) -> p2(x)
+       Got: ∀x: c0(x) -> p2(x)
+
+>>> DEPTH-4 ACCURACY: 86.0% (43/50) <<<
+
+============================================================
+DEPTH-5 (4-hop reasoning)
+============================================================
+Generating 50 test samples...
+Generated 50 samples
+
+Sample input (first 200 chars):
+  [WORLD_MODEL]
+∀x: c19(x) -> c9(x)
+∀x: c18(x) -> p2(x)
+c25(e21)
+∀x: c17(x) -> c8(x)
+c21(e12)
+c27(e25)
+∀x: c16(x) -> c7(x)
+c23(e17)
+∀x: c5(x) -> c2(x)
+c20(e10)
+c15(e1)
+c23(e16)
+∀x: c8(x) -> c3(x)
+∀x: c1...
+
+Expected output: ∀x: c0(x) -> p3(x)
+
+Evaluating 50 samples...
+Token indices sequence length is longer than the specified maximum sequence length for this model (1306 > 1024). Running this sequence through the model will result in indexing errors
+
+Sample predictions:
+  [✗] Expected: ∀x: c0(x) -> p3(x)
+       Got: [TASK]
+  [✗] Expected: ∀x: c0(x) -> p2(x)
+       Got: [TASK]
+  [✗] Expected: ∀x: c0(x) -> p1(x)
+       Got: [TASK]
+
+>>> DEPTH-5 ACCURACY: 2.0% (1/50) <<<
+
+============================================================
+SUMMARY: SYMBOLIC FORMAT
+============================================================
+Depth-2 (1-hop): 86.0% [PASS]
+Depth-3 (2-hop): 64.0% [PARTIAL]
+Depth-4 (3-hop): 86.0% [PASS]
+Depth-5 (4-hop): 2.0% [FAIL]
+
+============================================================
+COMPARISON
+============================================================
+
+Custom Transformer (1.9M params, trained):
+  Depth-2: 100.0%  |  Depth-3: 100.0%  |  Depth-4: 100.0%  |  Depth-5: 82.5%
+
+GPT-2 on Natural Language (few-shot):
+  Depth-2: 42.0%   |  Depth-3: 16.0%   |  Depth-4: 6.0%    |  Depth-5: 8.0%
+
+GPT-2 on Symbolic Format (few-shot):
+  Depth-2: 86.0%   |  Depth-3: 64.0%   |  Depth-4: 86.0%   |  Depth-5: 2.0%

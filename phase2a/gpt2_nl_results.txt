@@ -1,0 +1,115 @@
+============================================================
+TESTING GPT-2 ON INABHYD-STYLE MULTI-HOP REASONING
+============================================================
+
+============================================================
+DEPTH-2 (1-hop reasoning)
+============================================================
+Generating 50 test samples...
+
+Sample (truncated):
+  Facts: Nex is a impus. Every impus is large. Every impus is a jompus. Wex is a rompus. Every rompus is a jompus. Kex is a impus. Zex is a rompus....
+  Observations: Zex is red. Kex is red. Nex is red. Kex is a impus. Nex is a impus. Zex is a rompus.
+  Expected: Every jompus is red
+
+Evaluating 50 samples...
+
+Sample predictions:
+  [✗] Expected: Every jompus is red
+       Got: Every rompus is red...
+  [✓] Expected: Every dumpus is cold
+       Got: Every dumpus is cold...
+  [✓] Expected: Every numpus is large
+       Got: Every numpus is large...
+
+>>> DEPTH-2 ACCURACY: 42.0% (21/50) <<<
+
+============================================================
+DEPTH-3 (2-hop reasoning)
+============================================================
+Generating 50 test samples...
+
+Sample (truncated):
+  Facts: Every yumpus is a borpus. Every vumpus is a jompus. Every dumpus is a yumpus. Every tumpus is a yumpus. Every jompus is a borpus. Dex is a vumpus. Gex...
+  Observations: Nex is red. Fex is a vumpus. Dex is red. Nex is a numpus. Fex is red. Dex is a vumpus.
+  Expected: Every borpus is red
+
+Evaluating 50 samples...
+
+Sample predictions:
+  [✗] Expected: Every borpus is red
+       Got: Every jompus is a borpus...
+  [✗] Expected: Every wumpus is cold
+       Got: Every forpus is cold...
+  [✗] Expected: Every dumpus is cold
+       Got: Every forpus is cold...
+
+>>> DEPTH-3 ACCURACY: 16.0% (8/50) <<<
+
+============================================================
+DEPTH-4 (3-hop reasoning)
+============================================================
+Generating 50 test samples...
+
+Sample (truncated):
+  Facts: Every dorpus is blue. Every rompus is large. Nex is a tumpus. Gex is a impus. Alex is a tumpus. Every forpus is a dumpus. Every rompus is a dorpus. We...
+  Observations: Gex is a impus. Nex is small. Bex is a lorpus. Bex is small. Gex is small. Nex is a tumpus.
+  Expected: Every yumpus is small
+
+Evaluating 50 samples...
+
+Sample predictions:
+  [✗] Expected: Every yumpus is small
+       Got: Every forpus is small...
+  [✗] Expected: Every dumpus is small
+       Got: Every forpus is small...
+  [✗] Expected: Every vumpus is small
+       Got: Every forpus is small...
+
+>>> DEPTH-4 ACCURACY: 6.0% (3/50) <<<
+
+============================================================
+DEPTH-5 (4-hop reasoning)
+============================================================
+Generating 50 test samples...
+
+Sample (truncated):
+  Facts: Wex is a dorpus. Tex is a vumpus. Every forpus is a wumpus. Every dumpus is a zumpus. Jex is a vumpus. Every corpus is cold. Dex is a dumpus. Every jo...
+  Observations: Sam is blue. Lex is a rompus. Sam is a borpus. Rex is a wumpus. Lex is blue. Rex is blue.
+  Expected: Every forpus is blue
+
+Evaluating 50 samples...
+
+Sample predictions:
+  [✓] Expected: Every forpus is blue
+       Got: Every forpus is blue...
+  [✗] Expected: Every jompus is red
+       Got: Every forpus is red...
+  [✗] Expected: Every yumpus is large
+       Got: Every forpus is large...
+
+>>> DEPTH-5 ACCURACY: 8.0% (4/50) <<<
+
+============================================================
+SUMMARY
+============================================================
+Depth-2 (1-hop): 42.0% [PARTIAL]
+Depth-3 (2-hop): 16.0% [FAIL]
+Depth-4 (3-hop): 6.0% [FAIL]
+Depth-5 (4-hop): 8.0% [FAIL]
+
+============================================================
+COMPARISON WITH CUSTOM TRANSFORMER
+============================================================
+Custom Transformer (1.9M params):
+  Depth-2 (1-hop): 100.0%
+  Depth-3 (2-hop): 100.0%
+  Depth-4 (3-hop): 100.0%
+  Depth-5 (4-hop): 82.5%
+  Depth-6 (5-hop): 42.9%
+
+GPT-2-Small (gpt2, 124M params):
+  Depth-2 (1-hop): 42.0%
+  Depth-3 (2-hop): 16.0%
+  Depth-4 (3-hop): 6.0%
+  Depth-5 (4-hop): 8.0%
