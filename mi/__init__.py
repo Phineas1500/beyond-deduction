@@ -1,8 +1,8 @@
 """
 Mechanistic Interpretability module for Beyond Deduction.
 
-Implements probing, attention analysis, and activation patching to understand
-how Gemma 2 9B IT encodes concept levels and output decisions.
+Implements probing, attention analysis, activation patching, and logit lens
+to understand how Gemma 2 9B IT encodes concept levels and output decisions.
 
 Key findings:
 - Decision is locked by layer 8 (94.1% accuracy from probing)
@@ -10,11 +10,13 @@ Key findings:
 - Model has p ≈ 0.05 for parent output
 - H3 NOT supported (subsumption attention p=0.45)
 - Child attention paradox: failures attend MORE to child
+- Activation patching: 0% causal effect at L8 residual, 25% at L12 attention
 
 Phases:
 - Phase 3: Probing (activation_extractor.py, probes/)
 - Phase 4: Attention Analysis (attention_analysis.py)
-- Phase 5: Activation Patching (activation_patching.py) <- NEW
+- Phase 5: Activation Patching (activation_patching.py)
+- Phase 6: Logit Lens (logit_lens.py) <- NEW
 """
 
 from .model_wrapper import Gemma2Wrapper
@@ -35,6 +37,13 @@ from .activation_patching import (
     run_residual_patching_experiment,
     run_attention_patching_experiment,
     run_bidirectional_patching,
+)
+from .logit_lens import (
+    LogitLensConfig,
+    LogitLensResult,
+    run_logit_lens_analysis,
+    create_visualizations,
+    print_summary as logit_lens_summary,
 )
 
 __all__ = [
@@ -60,4 +69,10 @@ __all__ = [
     'run_residual_patching_experiment',
     'run_attention_patching_experiment',
     'run_bidirectional_patching',
+    # Logit Lens (Phase 6)
+    'LogitLensConfig',
+    'LogitLensResult',
+    'run_logit_lens_analysis',
+    'create_visualizations',
+    'logit_lens_summary',
 ]
