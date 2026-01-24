@@ -3,3 +3,9 @@ CLAUDE.md
 discarded/*.pt
 archive/
 *.pkl
+*results/
+
+# Exceptions for Set 3 files
+!benchmark/matched_pairs_set3_occam.pkl
+!benchmark/factorial_results/
+!benchmark/factorial_results/set3_*.pkl

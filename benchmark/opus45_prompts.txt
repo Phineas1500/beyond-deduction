@@ -1,0 +1,1105 @@
+================================================================================
+CLAUDE OPUS 4.5 - PROMPTS FOR ALL 100 PAIRS
+================================================================================
+
+Format: Q: {theories} We observe that: {observations} Please come up with hypothesis to explain observations.
+
+--------------------------------------------------------------------------------
+PAIR 0
+Child concept: lerpant | Parent concept: timple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Barbara is a lerpant. Each lerpant is a timple. Pamela is a lerpant. Carol is a lerpant. We observe that: Barbara is not salty. Carol is not salty. Pamela is not salty. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each lerpant is not salty
+Ground truth H2 (2-hop): Timples are not salty
+
+--------------------------------------------------------------------------------
+PAIR 1
+Child concept: pergit | Parent concept: jempor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: James is a pergit. Each pergit is a jempor. Ryan is a pergit. Sharon is a pergit. We observe that: James is not wooden. Sharon is not wooden. Ryan is not wooden. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Pergits are not wooden
+Ground truth H2 (2-hop): Jempors are not wooden
+
+--------------------------------------------------------------------------------
+PAIR 2
+Child concept: dropant | Parent concept: sarper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Timothy is a dropant. Dropants are sarpers. Cynthia is a dropant. Steven is a dropant. We observe that: Timothy is snowy. Steven is snowy. Cynthia is snowy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every dropant is snowy
+Ground truth H2 (2-hop): Each sarper is snowy
+
+--------------------------------------------------------------------------------
+PAIR 3
+Child concept: yompin | Parent concept: bempin
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Melissa is a yompin. Jennifer is a yompin. Yompins are bempins. Robert is a yompin. We observe that: Robert is bright. Melissa is bright. Jennifer is bright. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each yompin is bright
+Ground truth H2 (2-hop): Each bempin is bright
+
+--------------------------------------------------------------------------------
+PAIR 4
+Child concept: starple | Parent concept: phorpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jason is a starple. Dennis is a starple. Each starple is a phorpist. Thomas is a starple. We observe that: Thomas is not small. Jason is not small. Dennis is not small. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Starples are not small
+Ground truth H2 (2-hop): Phorpists are not small
+
+--------------------------------------------------------------------------------
+PAIR 5
+Child concept: tergit | Parent concept: bempin
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Sharon is a tergit. Tergits are bempins. Jacob is a tergit. Michelle is a tergit. We observe that: Sharon is not shy. Jacob is not shy. Michelle is not shy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each tergit is not shy
+Ground truth H2 (2-hop): Every bempin is not shy
+
+--------------------------------------------------------------------------------
+PAIR 6
+Child concept: tergit | Parent concept: rifpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Steven is a tergit. Andrew is a tergit. Tergits are rifpists. James is a tergit. We observe that: James is sour. Andrew is sour. Steven is sour. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Tergits are sour
+Ground truth H2 (2-hop): Each rifpist is sour
+
+--------------------------------------------------------------------------------
+PAIR 7
+Child concept: prilpant | Parent concept: serpee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Rebecca is a prilpant. Ryan is a prilpant. Nancy is a prilpant. Each prilpant is a serpee. We observe that: Nancy is not translucent. Rebecca is not translucent. Ryan is not translucent. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Prilpants are not translucent
+Ground truth H2 (2-hop): Each serpee is not translucent
+
+--------------------------------------------------------------------------------
+PAIR 8
+Child concept: jompus | Parent concept: zhimpor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Karen is a jompus. Edward is a jompus. Jompuses are zhimpors. Robert is a jompus. We observe that: Karen is sunny. Edward is sunny. Robert is sunny. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each jompus is sunny
+Ground truth H2 (2-hop): Each zhimpor is sunny
+
+--------------------------------------------------------------------------------
+PAIR 9
+Child concept: stirpor | Parent concept: boompist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Each stirpor is a boompist. Samantha is a stirpor. Stephen is a stirpor. Jeffrey is a stirpor. We observe that: Stephen is floral. Samantha is floral. Jeffrey is floral. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every stirpor is floral
+Ground truth H2 (2-hop): Boompists are floral
+
+--------------------------------------------------------------------------------
+PAIR 10
+Child concept: umpist | Parent concept: zhimpor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Stephanie is an umpist. Every umpist is a zhimpor. Christopher is an umpist. Mary is an umpist. We observe that: Christopher is not large. Mary is not large. Stephanie is not large. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Umpists are not large
+Ground truth H2 (2-hop): Every zhimpor is not large
+
+--------------------------------------------------------------------------------
+PAIR 11
+Child concept: hilper | Parent concept: worple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Angela is a hilper. Each hilper is a worple. Raymond is a hilper. Sarah is a hilper. We observe that: Angela is rainy. Sarah is rainy. Raymond is rainy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each hilper is rainy
+Ground truth H2 (2-hop): Each worple is rainy
+
+--------------------------------------------------------------------------------
+PAIR 12
+Child concept: felper | Parent concept: kurpor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Felpers are kurpors. Paul is a felper. Jessica is a felper. Charles is a felper. We observe that: Paul is brown. Jessica is brown. Charles is brown. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every felper is brown
+Ground truth H2 (2-hop): Each kurpor is brown
+
+--------------------------------------------------------------------------------
+PAIR 13
+Child concept: grimpant | Parent concept: lemper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Ronald is a grimpant. Deborah is a grimpant. Grimpants are lempers. Gregory is a grimpant. We observe that: Ronald is not nervous. Deborah is not nervous. Gregory is not nervous. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every grimpant is not nervous
+Ground truth H2 (2-hop): Every lemper is not nervous
+
+--------------------------------------------------------------------------------
+PAIR 14
+Child concept: thorpin | Parent concept: shalpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Raymond is a thorpin. Brenda is a thorpin. Each thorpin is a shalpist. Eric is a thorpin. We observe that: Eric is not feisty. Brenda is not feisty. Raymond is not feisty. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each thorpin is not feisty
+Ground truth H2 (2-hop): Each shalpist is not feisty
+
+--------------------------------------------------------------------------------
+PAIR 15
+Child concept: stergit | Parent concept: chorper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Ronald is a stergit. Stergits are chorpers. Joshua is a stergit. Debra is a stergit. We observe that: Debra is not translucent. Ronald is not translucent. Joshua is not translucent. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Stergits are not translucent
+Ground truth H2 (2-hop): Chorpers are not translucent
+
+--------------------------------------------------------------------------------
+PAIR 16
+Child concept: dumpus | Parent concept: gorpee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Dumpuses are gorpees. Amanda is a dumpus. Margaret is a dumpus. Frank is a dumpus. We observe that: Amanda is not angry. Margaret is not angry. Frank is not angry. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each dumpus is not angry
+Ground truth H2 (2-hop): Gorpees are not angry
+
+--------------------------------------------------------------------------------
+PAIR 17
+Child concept: jelgit | Parent concept: shalpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Pamela is a jelgit. Amy is a jelgit. Barbara is a jelgit. Each jelgit is a shalpist. We observe that: Amy is dull. Barbara is dull. Pamela is dull. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each jelgit is dull
+Ground truth H2 (2-hop): Shalpists are dull
+
+--------------------------------------------------------------------------------
+PAIR 18
+Child concept: lerpant | Parent concept: jompus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Stephanie is a lerpant. Elizabeth is a lerpant. Every lerpant is a jompus. Eric is a lerpant. We observe that: Eric is amenable. Elizabeth is amenable. Stephanie is amenable. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Lerpants are amenable
+Ground truth H2 (2-hop): Each jompus is amenable
+
+--------------------------------------------------------------------------------
+PAIR 19
+Child concept: jompus | Parent concept: ilpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: David is a jompus. Kenneth is a jompus. Every jompus is an ilpist. Angela is a jompus. We observe that: Kenneth is transparent. David is transparent. Angela is transparent. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Jompuses are transparent
+Ground truth H2 (2-hop): Ilpists are transparent
+
+--------------------------------------------------------------------------------
+PAIR 20
+Child concept: wolpee | Parent concept: bongit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Wolpees are bongits. Susan is a wolpee. Elizabeth is a wolpee. Brenda is a wolpee. We observe that: Elizabeth is angry. Brenda is angry. Susan is angry. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each wolpee is angry
+Ground truth H2 (2-hop): Bongits are angry
+
+--------------------------------------------------------------------------------
+PAIR 21
+Child concept: impus | Parent concept: gwompant
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Melissa is an impus. Kevin is an impus. Impuses are gwompants. Kenneth is an impus. We observe that: Kenneth is not temperate. Kevin is not temperate. Melissa is not temperate. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each impus is not temperate
+Ground truth H2 (2-hop): Gwompants are not temperate
+
+--------------------------------------------------------------------------------
+PAIR 22
+Child concept: lemper | Parent concept: yerpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Dennis is a lemper. Jessica is a lemper. Each lemper is a yerpist. Shirley is a lemper. We observe that: Shirley is not opaque. Jessica is not opaque. Dennis is not opaque. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Lempers are not opaque
+Ground truth H2 (2-hop): Yerpists are not opaque
+
+--------------------------------------------------------------------------------
+PAIR 23
+Child concept: ilpist | Parent concept: dolper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jessica is an ilpist. Each ilpist is a dolper. Scott is an ilpist. Edward is an ilpist. We observe that: Jessica is pale. Scott is pale. Edward is pale. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Ilpists are pale
+Ground truth H2 (2-hop): Dolpers are pale
+
+--------------------------------------------------------------------------------
+PAIR 24
+Child concept: scrompist | Parent concept: rofpin
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Scrompists are rofpins. Ashley is a scrompist. Jerry is a scrompist. Nicole is a scrompist. We observe that: Jerry is aggressive. Nicole is aggressive. Ashley is aggressive. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each scrompist is aggressive
+Ground truth H2 (2-hop): Rofpins are aggressive
+
+--------------------------------------------------------------------------------
+PAIR 25
+Child concept: zhorpant | Parent concept: jelgit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Patricia is a zhorpant. Each zhorpant is a jelgit. Ashley is a zhorpant. Mark is a zhorpant. We observe that: Ashley is small. Mark is small. Patricia is small. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Zhorpants are small
+Ground truth H2 (2-hop): Every jelgit is small
+
+--------------------------------------------------------------------------------
+PAIR 26
+Child concept: umpist | Parent concept: fimple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jessica is an umpist. Janet is an umpist. Scott is an umpist. Each umpist is a fimple. We observe that: Janet is oriental. Scott is oriental. Jessica is oriental. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every umpist is oriental
+Ground truth H2 (2-hop): Every fimple is oriental
+
+--------------------------------------------------------------------------------
+PAIR 27
+Child concept: wumpus | Parent concept: frompor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Sharon is a wumpus. Wumpuses are frompors. Jessica is a wumpus. Alexander is a wumpus. We observe that: Alexander is not translucent. Jessica is not translucent. Sharon is not translucent. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Wumpuses are not translucent
+Ground truth H2 (2-hop): Each frompor is not translucent
+
+--------------------------------------------------------------------------------
+PAIR 28
+Child concept: daumpin | Parent concept: kergit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Christopher is a daumpin. Brandon is a daumpin. Daumpins are kergits. Mark is a daumpin. We observe that: Brandon is moderate. Christopher is moderate. Mark is moderate. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Daumpins are moderate
+Ground truth H2 (2-hop): Every kergit is moderate
+
+--------------------------------------------------------------------------------
+PAIR 29
+Child concept: bongit | Parent concept: zumpus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jennifer is a bongit. Donald is a bongit. Every bongit is a zumpus. Gregory is a bongit. We observe that: Donald is temperate. Gregory is temperate. Jennifer is temperate. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each bongit is temperate
+Ground truth H2 (2-hop): Every zumpus is temperate
+
+--------------------------------------------------------------------------------
+PAIR 30
+Child concept: irper | Parent concept: daumpin
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Irpers are daumpins. Paul is an irper. Kenneth is an irper. Mary is an irper. We observe that: Kenneth is not salty. Mary is not salty. Paul is not salty. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each irper is not salty
+Ground truth H2 (2-hop): Every daumpin is not salty
+
+--------------------------------------------------------------------------------
+PAIR 31
+Child concept: gergit | Parent concept: irper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Charles is a gergit. Joshua is a gergit. Pamela is a gergit. Each gergit is an irper. We observe that: Joshua is translucent. Charles is translucent. Pamela is translucent. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Gergits are translucent
+Ground truth H2 (2-hop): Irpers are translucent
+
+--------------------------------------------------------------------------------
+PAIR 32
+Child concept: ilpist | Parent concept: tergit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Each ilpist is a tergit. Gregory is an ilpist. Justin is an ilpist. Lisa is an ilpist. We observe that: Justin is salty. Gregory is salty. Lisa is salty. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every ilpist is salty
+Ground truth H2 (2-hop): Tergits are salty
+
+--------------------------------------------------------------------------------
+PAIR 33
+Child concept: arper | Parent concept: rifpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Raymond is an arper. Arpers are rifpists. Jennifer is an arper. Alexander is an arper. We observe that: Raymond is small. Alexander is small. Jennifer is small. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Arpers are small
+Ground truth H2 (2-hop): Rifpists are small
+
+--------------------------------------------------------------------------------
+PAIR 34
+Child concept: kergit | Parent concept: shimpee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Maria is a kergit. Each kergit is a shimpee. Jennifer is a kergit. Nicole is a kergit. We observe that: Nicole is floral. Maria is floral. Jennifer is floral. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every kergit is floral
+Ground truth H2 (2-hop): Shimpees are floral
+
+--------------------------------------------------------------------------------
+PAIR 35
+Child concept: gomper | Parent concept: storpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Carolyn is a gomper. Every gomper is a storpist. Eric is a gomper. Scott is a gomper. We observe that: Scott is not discordant. Eric is not discordant. Carolyn is not discordant. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every gomper is not discordant
+Ground truth H2 (2-hop): Each storpist is not discordant
+
+--------------------------------------------------------------------------------
+PAIR 36
+Child concept: gomper | Parent concept: shumple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Laura is a gomper. Gompers are shumples. Mary is a gomper. Jennifer is a gomper. We observe that: Mary is not loud. Laura is not loud. Jennifer is not loud. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Gompers are not loud
+Ground truth H2 (2-hop): Shumples are not loud
+
+--------------------------------------------------------------------------------
+PAIR 37
+Child concept: bempin | Parent concept: wolpee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Every bempin is a wolpee. Deborah is a bempin. Thomas is a bempin. Barbara is a bempin. We observe that: Thomas is not translucent. Deborah is not translucent. Barbara is not translucent. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Bempins are not translucent
+Ground truth H2 (2-hop): Wolpees are not translucent
+
+--------------------------------------------------------------------------------
+PAIR 38
+Child concept: scrompist | Parent concept: frompor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Betty is a scrompist. Each scrompist is a frompor. Heather is a scrompist. Deborah is a scrompist. We observe that: Heather is kind. Betty is kind. Deborah is kind. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each scrompist is kind
+Ground truth H2 (2-hop): Frompors are kind
+
+--------------------------------------------------------------------------------
+PAIR 39
+Child concept: bongit | Parent concept: zilpor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Eric is a bongit. Susan is a bongit. Bongits are zilpors. Nicole is a bongit. We observe that: Eric is fast. Susan is fast. Nicole is fast. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Bongits are fast
+Ground truth H2 (2-hop): Zilpors are fast
+
+--------------------------------------------------------------------------------
+PAIR 40
+Child concept: borpin | Parent concept: dropant
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Barbara is a borpin. Each borpin is a dropant. Samantha is a borpin. Elizabeth is a borpin. We observe that: Samantha is not discordant. Elizabeth is not discordant. Barbara is not discordant. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each borpin is not discordant
+Ground truth H2 (2-hop): Each dropant is not discordant
+
+--------------------------------------------------------------------------------
+PAIR 41
+Child concept: gwompant | Parent concept: gorpee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: George is a gwompant. Every gwompant is a gorpee. Anna is a gwompant. Gregory is a gwompant. We observe that: Gregory is slow. Anna is slow. George is slow. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Gwompants are slow
+Ground truth H2 (2-hop): Gorpees are slow
+
+--------------------------------------------------------------------------------
+PAIR 42
+Child concept: gergit | Parent concept: sarper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Kathleen is a gergit. Sandra is a gergit. Nicole is a gergit. Each gergit is a sarper. We observe that: Sandra is sad. Nicole is sad. Kathleen is sad. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Gergits are sad
+Ground truth H2 (2-hop): Sarpers are sad
+
+--------------------------------------------------------------------------------
+PAIR 43
+Child concept: starple | Parent concept: felper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Starples are felpers. Helen is a starple. Anna is a starple. Jack is a starple. We observe that: Helen is small. Anna is small. Jack is small. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each starple is small
+Ground truth H2 (2-hop): Every felper is small
+
+--------------------------------------------------------------------------------
+PAIR 44
+Child concept: porpor | Parent concept: jompus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Samantha is a porpor. Margaret is a porpor. Karen is a porpor. Every porpor is a jompus. We observe that: Margaret is amenable. Samantha is amenable. Karen is amenable. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each porpor is amenable
+Ground truth H2 (2-hop): Every jompus is amenable
+
+--------------------------------------------------------------------------------
+PAIR 45
+Child concept: gwompant | Parent concept: rorpant
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Karen is a gwompant. Barbara is a gwompant. Sarah is a gwompant. Gwompants are rorpants. We observe that: Sarah is not translucent. Barbara is not translucent. Karen is not translucent. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Gwompants are not translucent
+Ground truth H2 (2-hop): Every rorpant is not translucent
+
+--------------------------------------------------------------------------------
+PAIR 46
+Child concept: phorpist | Parent concept: stopin
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Nicholas is a phorpist. Dennis is a phorpist. Every phorpist is a stopin. Edward is a phorpist. We observe that: Nicholas is floral. Dennis is floral. Edward is floral. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every phorpist is floral
+Ground truth H2 (2-hop): Each stopin is floral
+
+--------------------------------------------------------------------------------
+PAIR 47
+Child concept: serpee | Parent concept: arper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Every serpee is an arper. Linda is a serpee. Shirley is a serpee. Ronald is a serpee. We observe that: Ronald is bitter. Linda is bitter. Shirley is bitter. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Serpees are bitter
+Ground truth H2 (2-hop): Arpers are bitter
+
+--------------------------------------------------------------------------------
+PAIR 48
+Child concept: shilpant | Parent concept: serpee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Rebecca is a shilpant. Cynthia is a shilpant. Shilpants are serpees. Jonathan is a shilpant. We observe that: Rebecca is not windy. Jonathan is not windy. Cynthia is not windy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every shilpant is not windy
+Ground truth H2 (2-hop): Serpees are not windy
+
+--------------------------------------------------------------------------------
+PAIR 49
+Child concept: vumpus | Parent concept: dulpin
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Nicole is a vumpus. Vumpuses are dulpins. Melissa is a vumpus. Brandon is a vumpus. We observe that: Melissa is not pale. Brandon is not pale. Nicole is not pale. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Vumpuses are not pale
+Ground truth H2 (2-hop): Dulpins are not pale
+
+--------------------------------------------------------------------------------
+PAIR 50
+Child concept: serpee | Parent concept: welgit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Sharon is a serpee. Serpees are welgits. Laura is a serpee. Kathleen is a serpee. We observe that: Kathleen is not temperate. Laura is not temperate. Sharon is not temperate. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Serpees are not temperate
+Ground truth H2 (2-hop): Each welgit is not temperate
+
+--------------------------------------------------------------------------------
+PAIR 51
+Child concept: urpant | Parent concept: rorpant
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Maria is an urpant. Each urpant is a rorpant. Susan is an urpant. Amy is an urpant. We observe that: Maria is not opaque. Susan is not opaque. Amy is not opaque. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every urpant is not opaque
+Ground truth H2 (2-hop): Rorpants are not opaque
+
+--------------------------------------------------------------------------------
+PAIR 52
+Child concept: pergit | Parent concept: storpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jonathan is a pergit. Jeffrey is a pergit. Pergits are storpists. Dorothy is a pergit. We observe that: Jeffrey is not melodic. Jonathan is not melodic. Dorothy is not melodic. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Pergits are not melodic
+Ground truth H2 (2-hop): Storpists are not melodic
+
+--------------------------------------------------------------------------------
+PAIR 53
+Child concept: yimple | Parent concept: dropant
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Betty is a yimple. Each yimple is a dropant. Rachel is a yimple. Nicole is a yimple. We observe that: Rachel is not hot. Betty is not hot. Nicole is not hot. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every yimple is not hot
+Ground truth H2 (2-hop): Every dropant is not hot
+
+--------------------------------------------------------------------------------
+PAIR 54
+Child concept: shampor | Parent concept: gomper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Anthony is a shampor. Each shampor is a gomper. John is a shampor. Michael is a shampor. We observe that: John is moderate. Michael is moderate. Anthony is moderate. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each shampor is moderate
+Ground truth H2 (2-hop): Each gomper is moderate
+
+--------------------------------------------------------------------------------
+PAIR 55
+Child concept: lerpant | Parent concept: gergit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Alexander is a lerpant. Every lerpant is a gergit. Richard is a lerpant. Michelle is a lerpant. We observe that: Michelle is not large. Richard is not large. Alexander is not large. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each lerpant is not large
+Ground truth H2 (2-hop): Each gergit is not large
+
+--------------------------------------------------------------------------------
+PAIR 56
+Child concept: fomple | Parent concept: urpant
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Betty is a fomple. Gregory is a fomple. Samantha is a fomple. Every fomple is an urpant. We observe that: Betty is not orange. Samantha is not orange. Gregory is not orange. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Fomples are not orange
+Ground truth H2 (2-hop): Urpants are not orange
+
+--------------------------------------------------------------------------------
+PAIR 57
+Child concept: stopin | Parent concept: shampor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Each stopin is a shampor. Stephanie is a stopin. William is a stopin. Nicholas is a stopin. We observe that: William is not wooden. Stephanie is not wooden. Nicholas is not wooden. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Stopins are not wooden
+Ground truth H2 (2-hop): Each shampor is not wooden
+
+--------------------------------------------------------------------------------
+PAIR 58
+Child concept: ilpist | Parent concept: sorple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Margaret is an ilpist. Stephanie is an ilpist. Timothy is an ilpist. Every ilpist is a sorple. We observe that: Stephanie is opaque. Margaret is opaque. Timothy is opaque. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every ilpist is opaque
+Ground truth H2 (2-hop): Every sorple is opaque
+
+--------------------------------------------------------------------------------
+PAIR 59
+Child concept: fomple | Parent concept: phorpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Paul is a fomple. Sandra is a fomple. Gary is a fomple. Each fomple is a phorpist. We observe that: Sandra is not muffled. Gary is not muffled. Paul is not muffled. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every fomple is not muffled
+Ground truth H2 (2-hop): Each phorpist is not muffled
+
+--------------------------------------------------------------------------------
+PAIR 60
+Child concept: ilpist | Parent concept: storpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Rebecca is an ilpist. Angela is an ilpist. Ilpists are storpists. Eric is an ilpist. We observe that: Angela is muffled. Eric is muffled. Rebecca is muffled. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Ilpists are muffled
+Ground truth H2 (2-hop): Storpists are muffled
+
+--------------------------------------------------------------------------------
+PAIR 61
+Child concept: hilper | Parent concept: yimple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Kenneth is a hilper. Every hilper is a yimple. Joseph is a hilper. Thomas is a hilper. We observe that: Thomas is not feisty. Joseph is not feisty. Kenneth is not feisty. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Hilpers are not feisty
+Ground truth H2 (2-hop): Each yimple is not feisty
+
+--------------------------------------------------------------------------------
+PAIR 62
+Child concept: phorpist | Parent concept: irper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Phorpists are irpers. Stephen is a phorpist. Joshua is a phorpist. Justin is a phorpist. We observe that: Stephen is not spicy. Joshua is not spicy. Justin is not spicy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Phorpists are not spicy
+Ground truth H2 (2-hop): Irpers are not spicy
+
+--------------------------------------------------------------------------------
+PAIR 63
+Child concept: zhomple | Parent concept: orgit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Every zhomple is an orgit. Stephen is a zhomple. Jennifer is a zhomple. Joseph is a zhomple. We observe that: Stephen is not wooden. Jennifer is not wooden. Joseph is not wooden. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each zhomple is not wooden
+Ground truth H2 (2-hop): Each orgit is not wooden
+
+--------------------------------------------------------------------------------
+PAIR 64
+Child concept: umpist | Parent concept: wumpus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Umpists are wumpuses. Jacob is an umpist. Richard is an umpist. Kevin is an umpist. We observe that: Jacob is not amenable. Kevin is not amenable. Richard is not amenable. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Umpists are not amenable
+Ground truth H2 (2-hop): Wumpuses are not amenable
+
+--------------------------------------------------------------------------------
+PAIR 65
+Child concept: vumpus | Parent concept: dropant
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Emily is a vumpus. Kevin is a vumpus. Brian is a vumpus. Vumpuses are dropants. We observe that: Brian is spicy. Emily is spicy. Kevin is spicy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every vumpus is spicy
+Ground truth H2 (2-hop): Dropants are spicy
+
+--------------------------------------------------------------------------------
+PAIR 66
+Child concept: fimple | Parent concept: delpee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Anna is a fimple. Michael is a fimple. Every fimple is a delpee. Amy is a fimple. We observe that: Amy is not opaque. Anna is not opaque. Michael is not opaque. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each fimple is not opaque
+Ground truth H2 (2-hop): Every delpee is not opaque
+
+--------------------------------------------------------------------------------
+PAIR 67
+Child concept: shampor | Parent concept: dolper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Kevin is a shampor. Shampors are dolpers. Olivia is a shampor. Thomas is a shampor. We observe that: Thomas is not aggressive. Kevin is not aggressive. Olivia is not aggressive. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each shampor is not aggressive
+Ground truth H2 (2-hop): Every dolper is not aggressive
+
+--------------------------------------------------------------------------------
+PAIR 68
+Child concept: tergit | Parent concept: zumpus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Pamela is a tergit. Each tergit is a zumpus. Barbara is a tergit. Stephanie is a tergit. We observe that: Pamela is discordant. Barbara is discordant. Stephanie is discordant. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each tergit is discordant
+Ground truth H2 (2-hop): Every zumpus is discordant
+
+--------------------------------------------------------------------------------
+PAIR 69
+Child concept: ilpist | Parent concept: irper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Brenda is an ilpist. Jerry is an ilpist. Emma is an ilpist. Each ilpist is an irper. We observe that: Brenda is floral. Emma is floral. Jerry is floral. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Ilpists are floral
+Ground truth H2 (2-hop): Every irper is floral
+
+--------------------------------------------------------------------------------
+PAIR 70
+Child concept: scrompist | Parent concept: fimple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Anna is a scrompist. Joshua is a scrompist. Larry is a scrompist. Each scrompist is a fimple. We observe that: Larry is amenable. Joshua is amenable. Anna is amenable. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each scrompist is amenable
+Ground truth H2 (2-hop): Each fimple is amenable
+
+--------------------------------------------------------------------------------
+PAIR 71
+Child concept: numpus | Parent concept: tergit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Timothy is a numpus. William is a numpus. Brandon is a numpus. Every numpus is a tergit. We observe that: Brandon is not moderate. William is not moderate. Timothy is not moderate. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Numpuses are not moderate
+Ground truth H2 (2-hop): Tergits are not moderate
+
+--------------------------------------------------------------------------------
+PAIR 72
+Child concept: dumpus | Parent concept: pergit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Sarah is a dumpus. Joseph is a dumpus. Dumpuses are pergits. Nicole is a dumpus. We observe that: Joseph is large. Sarah is large. Nicole is large. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Dumpuses are large
+Ground truth H2 (2-hop): Pergits are large
+
+--------------------------------------------------------------------------------
+PAIR 73
+Child concept: rimpee | Parent concept: borpin
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Each rimpee is a borpin. Daniel is a rimpee. Dennis is a rimpee. Nicole is a rimpee. We observe that: Daniel is oriental. Dennis is oriental. Nicole is oriental. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each rimpee is oriental
+Ground truth H2 (2-hop): Each borpin is oriental
+
+--------------------------------------------------------------------------------
+PAIR 74
+Child concept: delpee | Parent concept: yempor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Michael is a delpee. Eric is a delpee. Each delpee is a yempor. Laura is a delpee. We observe that: Eric is not floral. Laura is not floral. Michael is not floral. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Delpees are not floral
+Ground truth H2 (2-hop): Every yempor is not floral
+
+--------------------------------------------------------------------------------
+PAIR 75
+Child concept: dolper | Parent concept: arper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: William is a dolper. Dolpers are arpers. Kenneth is a dolper. Donna is a dolper. We observe that: Donna is not small. Kenneth is not small. William is not small. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each dolper is not small
+Ground truth H2 (2-hop): Arpers are not small
+
+--------------------------------------------------------------------------------
+PAIR 76
+Child concept: gwompant | Parent concept: shimpee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Carol is a gwompant. Margaret is a gwompant. Dennis is a gwompant. Each gwompant is a shimpee. We observe that: Dennis is luminous. Margaret is luminous. Carol is luminous. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each gwompant is luminous
+Ground truth H2 (2-hop): Each shimpee is luminous
+
+--------------------------------------------------------------------------------
+PAIR 77
+Child concept: serpee | Parent concept: sorple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jacob is a serpee. Shirley is a serpee. Ryan is a serpee. Serpees are sorples. We observe that: Ryan is snowy. Jacob is snowy. Shirley is snowy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every serpee is snowy
+Ground truth H2 (2-hop): Sorples are snowy
+
+--------------------------------------------------------------------------------
+PAIR 78
+Child concept: irper | Parent concept: zilpor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jason is an irper. Irpers are zilpors. Charles is an irper. Raymond is an irper. We observe that: Charles is dull. Raymond is dull. Jason is dull. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each irper is dull
+Ground truth H2 (2-hop): Every zilpor is dull
+
+--------------------------------------------------------------------------------
+PAIR 79
+Child concept: porpor | Parent concept: zumpus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Eric is a porpor. Nicholas is a porpor. Every porpor is a zumpus. Anthony is a porpor. We observe that: Nicholas is not dark. Anthony is not dark. Eric is not dark. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each porpor is not dark
+Ground truth H2 (2-hop): Zumpuses are not dark
+
+--------------------------------------------------------------------------------
+PAIR 80
+Child concept: rorpant | Parent concept: fimple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jason is a rorpant. Sharon is a rorpant. Joseph is a rorpant. Rorpants are fimples. We observe that: Sharon is not large. Joseph is not large. Jason is not large. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Rorpants are not large
+Ground truth H2 (2-hop): Every fimple is not large
+
+--------------------------------------------------------------------------------
+PAIR 81
+Child concept: dumpus | Parent concept: bongit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jeffrey is a dumpus. Stephen is a dumpus. Donna is a dumpus. Each dumpus is a bongit. We observe that: Stephen is orange. Jeffrey is orange. Donna is orange. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Dumpuses are orange
+Ground truth H2 (2-hop): Bongits are orange
+
+--------------------------------------------------------------------------------
+PAIR 82
+Child concept: jompus | Parent concept: urpant
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Sarah is a jompus. Anthony is a jompus. Patricia is a jompus. Jompuses are urpants. We observe that: Sarah is not sour. Anthony is not sour. Patricia is not sour. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every jompus is not sour
+Ground truth H2 (2-hop): Every urpant is not sour
+
+--------------------------------------------------------------------------------
+PAIR 83
+Child concept: bongit | Parent concept: stergit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Amy is a bongit. Carolyn is a bongit. Each bongit is a stergit. Patrick is a bongit. We observe that: Patrick is not moderate. Carolyn is not moderate. Amy is not moderate. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Bongits are not moderate
+Ground truth H2 (2-hop): Every stergit is not moderate
+
+--------------------------------------------------------------------------------
+PAIR 84
+Child concept: timple | Parent concept: welgit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: William is a timple. Each timple is a welgit. Eric is a timple. Barbara is a timple. We observe that: William is not liquid. Eric is not liquid. Barbara is not liquid. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Timples are not liquid
+Ground truth H2 (2-hop): Each welgit is not liquid
+
+--------------------------------------------------------------------------------
+PAIR 85
+Child concept: sorple | Parent concept: stirpor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Each sorple is a stirpor. Linda is a sorple. Brenda is a sorple. Alexander is a sorple. We observe that: Brenda is not slow. Linda is not slow. Alexander is not slow. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Sorples are not slow
+Ground truth H2 (2-hop): Stirpors are not slow
+
+--------------------------------------------------------------------------------
+PAIR 86
+Child concept: porpor | Parent concept: gomper
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Robert is a porpor. Amy is a porpor. Each porpor is a gomper. Charles is a porpor. We observe that: Charles is not liquid. Robert is not liquid. Amy is not liquid. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every porpor is not liquid
+Ground truth H2 (2-hop): Each gomper is not liquid
+
+--------------------------------------------------------------------------------
+PAIR 87
+Child concept: yompin | Parent concept: pergit
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Ashley is a yompin. Jeffrey is a yompin. Every yompin is a pergit. William is a yompin. We observe that: Ashley is oriental. Jeffrey is oriental. William is oriental. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each yompin is oriental
+Ground truth H2 (2-hop): Every pergit is oriental
+
+--------------------------------------------------------------------------------
+PAIR 88
+Child concept: umpist | Parent concept: wumpus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Maria is an umpist. Umpists are wumpuses. Debra is an umpist. Nicholas is an umpist. We observe that: Debra is spicy. Maria is spicy. Nicholas is spicy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each umpist is spicy
+Ground truth H2 (2-hop): Wumpuses are spicy
+
+--------------------------------------------------------------------------------
+PAIR 89
+Child concept: grimpant | Parent concept: dumpus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Each grimpant is a dumpus. Deborah is a grimpant. Mary is a grimpant. Jonathan is a grimpant. We observe that: Mary is not feisty. Jonathan is not feisty. Deborah is not feisty. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each grimpant is not feisty
+Ground truth H2 (2-hop): Every dumpus is not feisty
+
+--------------------------------------------------------------------------------
+PAIR 90
+Child concept: yumpus | Parent concept: drompee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Every yumpus is a drompee. Donald is a yumpus. Anthony is a yumpus. Jacob is a yumpus. We observe that: Donald is bright. Jacob is bright. Anthony is bright. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Yumpuses are bright
+Ground truth H2 (2-hop): Drompees are bright
+
+--------------------------------------------------------------------------------
+PAIR 91
+Child concept: zhorpant | Parent concept: remple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Jennifer is a zhorpant. Each zhorpant is a remple. Jessica is a zhorpant. Shirley is a zhorpant. We observe that: Jessica is earthy. Jennifer is earthy. Shirley is earthy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each zhorpant is earthy
+Ground truth H2 (2-hop): Every remple is earthy
+
+--------------------------------------------------------------------------------
+PAIR 92
+Child concept: shergit | Parent concept: serpee
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: George is a shergit. Maria is a shergit. Each shergit is a serpee. William is a shergit. We observe that: William is shy. George is shy. Maria is shy. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Shergits are shy
+Ground truth H2 (2-hop): Serpees are shy
+
+--------------------------------------------------------------------------------
+PAIR 93
+Child concept: shumple | Parent concept: umpist
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Kenneth is a shumple. Each shumple is an umpist. Stephanie is a shumple. Debra is a shumple. We observe that: Kenneth is brown. Stephanie is brown. Debra is brown. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each shumple is brown
+Ground truth H2 (2-hop): Each umpist is brown
+
+--------------------------------------------------------------------------------
+PAIR 94
+Child concept: worple | Parent concept: impus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: David is a worple. Karen is a worple. Sarah is a worple. Each worple is an impus. We observe that: David is translucent. Karen is translucent. Sarah is translucent. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Worples are translucent
+Ground truth H2 (2-hop): Impuses are translucent
+
+--------------------------------------------------------------------------------
+PAIR 95
+Child concept: yimple | Parent concept: thorpin
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Olivia is a yimple. Daniel is a yimple. Every yimple is a thorpin. Margaret is a yimple. We observe that: Olivia is slow. Margaret is slow. Daniel is slow. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every yimple is slow
+Ground truth H2 (2-hop): Thorpins are slow
+
+--------------------------------------------------------------------------------
+PAIR 96
+Child concept: orgit | Parent concept: zhomple
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Carol is an orgit. Sarah is an orgit. Kenneth is an orgit. Orgits are zhomples. We observe that: Sarah is not sweet. Kenneth is not sweet. Carol is not sweet. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Each orgit is not sweet
+Ground truth H2 (2-hop): Every zhomple is not sweet
+
+--------------------------------------------------------------------------------
+PAIR 97
+Child concept: drompee | Parent concept: impus
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Christopher is a drompee. Donna is a drompee. Amanda is a drompee. Each drompee is an impus. We observe that: Donna is not blue. Christopher is not blue. Amanda is not blue. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Every drompee is not blue
+Ground truth H2 (2-hop): Each impus is not blue
+
+--------------------------------------------------------------------------------
+PAIR 98
+Child concept: dropant | Parent concept: lerpant
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Dennis is a dropant. Jacob is a dropant. Dropants are lerpants. Emma is a dropant. We observe that: Emma is not slow. Dennis is not slow. Jacob is not slow. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Dropants are not slow
+Ground truth H2 (2-hop): Every lerpant is not slow
+
+--------------------------------------------------------------------------------
+PAIR 99
+Child concept: shergit | Parent concept: porpor
+--------------------------------------------------------------------------------
+
+PROMPT:
+Q: Every shergit is a porpor. Barbara is a shergit. Timothy is a shergit. Dennis is a shergit. We observe that: Dennis is not pale. Barbara is not pale. Timothy is not pale. Please come up with hypothesis to explain observations.
+
+Ground truth H1 (1-hop): Shergits are not pale
+Ground truth H2 (2-hop): Each porpor is not pale
